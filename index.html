@@ -1,150 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="mediaqueries.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayush Mishra — Data Analytics Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="images/profile_pic.png">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="Desktop-nav">
-        <div class="logo">Ayush Mishra</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#" class="home-link"><i class="fas fa-home"></i></a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">Ayush Mishra</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#involvement">Involvement</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="hero" class="section hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Final-year BSc Data Analytics student</h1>
+        <p>I turn complex, messy datasets into clear, actionable insights that help teams make better decisions. I’ve led a team to build an NLP‑driven college feedback analysis system that transforms unstructured text into measurable sentiment and themes, and I’ve deployed Flask‑based data apps and interactive dashboards that make analysis accessible to non‑technical stakeholders.</p>
+        <p>I enjoy end‑to‑end problem solving—cleaning data, designing features, evaluating models, and communicating results with compelling visuals. I’m curious, hands‑on, and excited to contribute to internships or projects where data can create real impact.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Open to internships</a>
+          <a class="btn" href="https://drive.google.com/file/d/1ilxUbuG-PDC4eZaQmNWB6OQ-tUVGPxR-/view?usp=drive_link" target="_blank" rel="noopener">View CV</a>
+          <a class="icon-btn" href="https://github.com/Ayushsan1" target="_blank" rel="noopener">
+            <img src="assets/github.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="images/profile_pic.png" alt="Ayush Mishra profile photo">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Summary</h2>
+      <p>I’m a data analytics student with experience across the analytics lifecycle—data collection, cleaning, exploration, modeling, and storytelling. My recent projects include sentiment analysis on student feedback using NLP, and building interactive dashboards that surface trends and KPIs for clinical and academic datasets.</p>
+      <p>My approach balances rigor and clarity: ask the right question, validate assumptions, choose methods that fit the data, and present findings in ways that drive action. I care about reproducibility, readable code, and communicating results to diverse audiences.</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/experience.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>Clinical Data Analyst</h3>
+            <p class="meta">Max Healthcare, Saket • Jul 2024 — Aug 2024 • Saket</p>
+            <ul class="list">
+              <li>Analyzed patient data and built visuals using Power BI and Excel.</li>
+              <li>Developed interactive Power BI dashboards supporting weekly trend analysis of clinical metrics across 5 ongoing clinical studies over 12 months, improving reporting efficiency by 40% and enabling real-time data access for cross‑functional teams.</li>
             </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Ayush Mishra</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#" onclick="toggleMenu()"><i class="fas fa-home"></i></a></li>
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section_pic-container">
-            <img src="images/profile_pic.png" alt="Ayush Mishra Profile pictures">
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/experience.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>Data Analyst</h3>
+            <p class="meta">SkillUpgrade • Jun 2024 • Tamil Nadu</p>
+            <ul class="list">
+              <li>Virtual internship focused on hypothesis testing, data cleaning, and machine learning.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        </div>
-        <div class="section_text">
-            <p class="section_text_p1">Hello I'm</p>
-            <h1 class="title">Ayush Mishra</h1>
-            <p class="section_text_p2">Data Analyst</p>
-            <div id="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./images/CV Ayush MIshra.pdf')">
-                Download CV</button> 
-                <button class="btn btn-color-1" onclick="location.href='#contact'">
-                    Contact Info</button> 
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/project-3.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>BCG GenAI Job Simulation</h3>
+            <p class="meta">BCG • Jun 2025</p>
+            <ul class="list">
+              <li>Developed an AI-powered financial chatbot for BCG’s GenAI Consulting team.</li>
+              <li>Used Python and pandas for data manipulation and rule‑based logic.</li>
+              <li>Integrated and interpreted complex financial data from 10‑K and 10‑Q reports to deliver user‑friendly insights.</li>
+            </ul>
+            <a class="btn small" href="https://github.com/Ayushsan1/FAQ-chatbot" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/Project-2.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>Placement Prediction ML Model</h3>
+            <p class="meta">RIT, DSEU • Nov 2024 — Dec 2024</p>
+            <ul class="list">
+              <li>Preprocessed CSV data using matplotlib and scikit‑learn.</li>
+              <li>Performed logistic classification with scaled features.</li>
+              <li>Persisted the model using pickle.</li>
+            </ul>
+            <a class="btn small" href="https://github.com/Ayushsan1/-Basic-Placement-Prediction-Model" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/about-pic.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>CSV Data Sales Analysis</h3>
+            <p class="meta">Rajokri Institute of Technology • Jul 2024</p>
+            <ul class="list">
+              <li>Performed data cleaning and preprocessing.</li>
+              <li>Analyzed categorical purchasing power.</li>
+              <li>Visualized trends with graph representations.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            </div>
-            <div id="social-container">
-                <img src="./assets/linkedin.png" alt="My linkedin Profile" 
-                class="icon" onclick="location.href='https://www.linkedin.com/in/ayush-mishra1728/'">
-                <img src="./assets/github.png" alt="My Github account" 
-                class="icon" onclick="location.href='https://github.com/Ayushsan1'">
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/education.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>BSc in Data Analytics</h3>
+            <p class="meta">Delhi Skill and Entrepreneurship University • Rajokri Campus • 2026</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            </div>
+  <section id="involvement" class="section">
+    <div class="container">
+      <h2>Involvement</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <img src="assets/experience.png" alt="">
+          </div>
+          <div class="card-body">
+            <h3>President, Entrepreneurship Cell</h3>
+            <p class="meta">Rajokri Campus • Nov 2024 — Present</p>
+            <ul class="list">
+              <li>Lead a team organizing events and seminars to help students grow beyond the curriculum.</li>
+              <li>Coordinate across teams to deliver effective events.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        </div>
-    </section>
-    <section id="about">
-        <p class="section_text_p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; padding: 2rem;">
-            <div class="section_pic-container" style="flex: 0 1 280px;">
-                <img src="./images/about-pic.jpg" alt="Profile Picture" class="about-pic" style="border-radius: 15px; width: 100%; height: auto; max-width: 280px;"/>
-            </div>
-            <div class="about-text-container" style="flex: 0 1 500px; padding: 1rem;">
-                <p style="line-height: 1.8; text-align: justify; font-size: 1.1rem;">
-                    I am Ayush Mishra currently pursuing Bachelors of Science in Data Analytics from Delhi Skill and Entrepreneurship University (DSEU) Rajokri Campus. I am in my Final year of the Degree and have acquired skills like Python, Excel, PowerBi / Tableau, MySQL, and Machine Learning.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    </section>
-    <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="contact-info-container" style="display: flex; flex-direction: column; gap: 20px; align-items: center; padding: 20px; width: 100%; max-width: 600px; margin: 0 auto;">
-            <div class="contact-details" style="display: flex; align-items: flex-start; gap: 15px; width: 100%; padding: 15px;">
-                <img src="./assets/experience.png" alt="experience" class="icon" style="width: 24px; height: 24px; margin-top: 4px;">
-                <div style="flex: 1;">
-                    <h3>Clinical Data Analyst</h3>
-                    <p>1 Month intern at MaxHealthcare, Saket</p>
-                    <p style="color: #666; font-size: 0.9rem;">July 2024 - August 2024</p>
-                </div>
-            </div>
-            <div class="contact-details" style="display: flex; align-items: flex-start; gap: 15px; width: 100%; padding: 15px;">
-                <img src="./assets/experience.png" alt="experience" class="icon" style="width: 24px; height: 24px; margin-top: 4px;">
-                <div style="flex: 1;">
-                    <h3>Data Analyst</h3>
-                    <p>Remote Internship at SkillUpgrade</p>
-                    <p style="color: #666; font-size: 0.9rem;">June 2024 - July 2024</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="project">
-        <p class="section_text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="project-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem;">
-            <div class="project-card" style="flex: 0 1 350px; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <a href="https://github.com/Ayushsan1" target="_blank" style="display: block;">
-                    <img src="./assets/Project-1.png" alt="Project 1" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    <div style="padding: 1rem;">
-                        <h3 style="margin-bottom: 0.5rem;">Data Analysis Project</h3>
-                        <p style="color: #666; font-size: 0.9rem;">Python, Pandas, Matplotlib</p>
-                    </div>
-                </a>
-            </div>
-            <div class="project-card" style="flex: 0 1 350px; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <a href="https://github.com/Ayushsan1" target="_blank" style="display: block;">
-                    <img src="./assets/Project-2.png" alt="Project 2" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    <div style="padding: 1rem;">
-                        <h3 style="margin-bottom: 0.5rem;">Data Visualization Dashboard</h3>
-                        <p style="color: #666; font-size: 0.9rem;">PowerBI, Excel, SQL</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <p class="section_text_p1">Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-container" style="display: flex; flex-direction: column; gap: 20px; align-items: center; padding: 20px;">
-            <div class="contact-details" style="display: flex; align-items: center; gap: 15px;">
-                <i class="fas fa-envelope" style="font-size: 24px; color: #555;"></i>
-                <p><a href="mailto:aayushmish18@gmail.com">aayushmish18@gmail.com</a></p>
-            </div>
-            <div class="contact-details" style="display: flex; align-items: center; gap: 15px;">
-                <i class="fas fa-phone" style="font-size: 24px; color: #555;"></i>
-                <p>+91 8373967263</p>
-            </div>
-            <div class="contact-details" style="display: flex; align-items: center; gap: 15px;">
-                <i class="fas fa-map-marker-alt" style="font-size: 24px; color: #555;"></i>
-                <p>New Delhi, India</p>
-            </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
-</body> 
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="py" x1="0" x2="1"><stop offset="0" stop-color="#3776AB"/><stop offset="1" stop-color="#4B8CD3"/></linearGradient></defs><path d="M12 3c3 0 5 1.5 5 4v3c0 1.7-1.3 3-3 3H10c-1.1 0-2 .9-2 2v1c0 1.7-1.3 3-3 3h-.5" fill="url(#py)"/><circle cx="9.5" cy="5.5" r="1" fill="#fff"/></svg>
+          Python
+        </li>
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2" fill="#00A651"/><path d="M8 8h8M8 12h8M8 16h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          Excel
+        </li>
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="7" rx="7" ry="3.5" fill="#7389AE"/><path d="M5 7v10c0 2 3 3.5 7 3.5s7-1.5 7-3.5V7" fill="#5E7396"/></svg>
+          SQL
+        </li>
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="8" r="2.2" fill="#F59E0B"/><circle cx="19" cy="8" r="2.2" fill="#10B981"/><circle cx="12" cy="17" r="2.2" fill="#7C3AED"/><path d="M7 8c2 0 5 0 7 3M17 8c-2 0-5 0-7 3M12 14v3" stroke="#A3B3C9" stroke-width="1.6" stroke-linecap="round"/></svg>
+          Machine Learning
+        </li>
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="3" fill="#F2C811"/><path d="M7 15l3-6 3 4 2-3 3 5" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Power BI
+        </li>
+        <li>
+          <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true"><g fill="#1F5AA6"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="8" cy="16" r="2"/><circle cx="16" cy="16" r="2"/></g><path d="M8 8h8M8 16h8M8 8v8M16 8v8" stroke="#6FA3D6" stroke-width="1.6"/></svg>
+          Tableau
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Open to internships and collaborative projects in data analytics and machine learning.</p>
+      <div class="contact-actions">
+        <a class="btn primary" href="https://github.com/Ayushsan1" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Ayush Mishra • Built with HTML, CSS, and JavaScript</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
