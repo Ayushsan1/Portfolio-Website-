@@ -108,6 +108,58 @@ img {
   align-items: center;
 }
 
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo img {
+  border-radius: 999px;
+  border: 2px solid var(--border);
+}
+
+.floating-bubble {
+  position: absolute;
+  right: -14px;
+  top: -12px;
+  background: #ffffff;
+  color: var(--primary-ink);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border-radius: 16px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-bubble::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  bottom: 12px;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transform: rotate(45deg);
+}
+
+.bubble-text {
+  white-space: nowrap;
+}
+
+@keyframes float {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(6px,-6px); }
+  50% { transform: translate(10px,0); }
+  75% { transform: translate(6px,6px); }
+  100% { transform: translate(0,0); }
+}
 .hero-text h1 {
   font-size: 36px;
   line-height: 1.2;
@@ -267,6 +319,10 @@ h2 {
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px 0;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .footer-inner {
