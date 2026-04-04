@@ -269,8 +269,52 @@ h2 {
 }
 
 .card-body h3 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 20px;
+}
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.status-tag {
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.card.featured {
+  grid-column: 1 / -1;
+  border: 1px solid var(--accent);
+  background: linear-gradient(145deg, var(--card), rgba(124, 92, 255, 0.05));
+  position: relative;
+  overflow: hidden;
+}
+
+.card.featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.card.featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(124, 92, 255, 0.15);
+  border-color: var(--primary);
 }
 
 .meta {
