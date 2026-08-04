@@ -8,26 +8,26 @@
   <meta name="description" content="Portfolio of Ayush Mishra - BSc Data Analytics Graduate (CGPA 9.4). Data Analyst, Machine Learning Practitioner, and BI Specialist.">
   <meta name="keywords" content="Ayush Mishra, Data Analyst, Machine Learning, Python, SQL, Power BI, Portfolio, Data Analytics">
 
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Ayush Mishra — Data Analyst & ML Portfolio">
   <meta property="og:description" content="Data cleaning, visualization, hypothesis testing, and machine learning solutions using Python, SQL, Power BI, and Excel.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="icon" href="images/profile_pic.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Header / Navigation -->
+  <!-- Site Header & Navigation -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
-        Ayush<span class="accent">.</span>
+        Ayush<span class="accent-dot">.</span>
       </a>
 
       <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">
@@ -54,16 +54,17 @@
   </header>
 
   <main>
-    <!-- Hero Section (Binjan Style) -->
+    <!-- Hero Section (Binjan Layout with Paint Brush Backdrop) -->
     <section id="hero" class="hero-section">
       <div class="container hero-grid">
+        
         <!-- Hero Left Column -->
         <div class="hero-col-left">
-          <h1 class="hero-title">
-            Hey There,<br>I'm Ayush
+          <h1 class="hero-greeting">
+            Hey There,<br>I'm <span class="name-highlight">Ayush</span>
           </h1>
           <a class="hero-email-tag" href="mailto:aayushmish18@gmail.com">aayushmish18@gmail.com</a>
-          
+
           <div class="hero-stat-box">
             <span class="hero-stat-num">9.4</span>
             <span class="hero-stat-label">CGPA Graduate</span>
@@ -71,18 +72,17 @@
 
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#contact">Get in Touch</a>
-            <a class="btn btn-outline" href="https://drive.google.com/file/d/124cHdws6RxuOJRF1J5J5DzIG5U_oQ_-K/view?usp=sharing" target="_blank" rel="noopener">View CV</a>
+            <a class="btn btn-outline" href="https://drive.google.com/file/d/1D_1Pw_KDS_zvsXhVv0poFWtScqWQl6kU/view?usp=sharing" target="_blank" rel="noopener">View CV</a>
           </div>
         </div>
 
         <!-- Hero Center Column (Profile Photo with Teal Paint Brush Backdrop) -->
         <div class="hero-col-center">
           <div class="hero-image-wrapper">
-            <!-- Dynamic Teal Brush Stroke SVG Backdrop -->
+            <!-- Dynamic Teal Paint Brush Backdrop SVG -->
             <div class="brush-stroke-bg">
-              <svg viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 120,40 C 220,15 380,25 440,90 C 490,145 470,260 450,340 C 430,420 340,470 240,480 C 140,490 50,430 30,350 C 10,270 20,180 60,110 C 80,75 95,50 120,40 Z" />
-                <path d="M 80,100 C 160,70 340,60 420,120 C 480,170 460,300 420,380 C 370,460 250,480 150,450 C 60,420 30,320 40,220 C 45,160 60,120 80,100 Z" opacity="0.7"/>
+              <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 90 220 C 60 140 120 70 210 50 C 310 30 420 80 440 170 C 460 260 410 360 330 430 C 250 500 130 470 70 390 C 20 320 120 300 90 220 Z" />
               </svg>
             </div>
 
@@ -106,9 +106,11 @@
 
         <!-- Hero Right Column -->
         <div class="hero-col-right">
-          <p class="hero-note-text">
-            I extract actionable insights from complex datasets and build production-ready analytics solutions. And I love what I do.
-          </p>
+          <div class="hero-note-box">
+            <p class="hero-note-text">
+              I extract actionable insights from complex datasets and build production-ready analytics solutions. And I love what I do.
+            </p>
+          </div>
 
           <div class="hero-social-links">
             <a class="social-icon-btn" href="https://github.com/Ayushsan1" target="_blank" rel="noopener" aria-label="GitHub">
@@ -122,6 +124,7 @@
             </a>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -129,8 +132,10 @@
     <section id="services" class="section section-bg-alt">
       <div class="container">
         <div class="services-grid">
-          <!-- Services Cards -->
+          
+          <!-- Specialization Cards -->
           <div class="services-cards-col">
+            
             <!-- Card 1: Data Analysis & ML -->
             <div class="service-card-item">
               <div class="service-icon-circle teal">
@@ -138,13 +143,14 @@
               </div>
               <div class="service-info">
                 <h3>Data Analysis & Machine Learning</h3>
-                <p>Translating raw datasets into predictive models, statistical hypothesis tests, and clean exploratory insights.</p>
+                <p>Translating raw datasets into predictive models, statistical hypothesis tests, fine-tuning, and clean exploratory insights.</p>
                 <div class="service-tags">
                   <span class="skill-chip">Python</span>
                   <span class="skill-chip">SQL</span>
                   <span class="skill-chip">PostgreSQL</span>
                   <span class="skill-chip">pandas</span>
                   <span class="skill-chip">scikit-learn</span>
+                  <span class="skill-chip">Machine Learning</span>
                   <span class="skill-chip">Hypothesis Testing</span>
                   <span class="skill-chip">Fine Tuning</span>
                 </div>
@@ -153,7 +159,7 @@
 
             <!-- Card 2: Visualization & BI -->
             <div class="service-card-item">
-              <div class="service-icon-circle yellow">
+              <div class="service-icon-circle gold">
                 <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
               </div>
               <div class="service-info">
@@ -184,21 +190,22 @@
                   <span class="skill-chip">Flask</span>
                   <span class="skill-chip">LangChain</span>
                   <span class="skill-chip">MongoDB</span>
-                  <span class="skill-chip">HuggingFace</span>
+                  <span class="skill-chip">HuggingFace Spaces</span>
                   <span class="skill-chip">Linux</span>
                 </div>
               </div>
             </div>
+
           </div>
 
-          <!-- Services Info & Stats -->
+          <!-- Services Right Column -->
           <div class="services-info-col">
             <h2 class="section-title">What do I help?</h2>
             <p class="services-summary-text">
-              Hands-on experience in data cleaning, visualization, hypothesis testing, and machine learning. My experience spans clinical analytics, market research, and end-to-end machine learning projects, including model deployment and NLP-based applications.
+              Final-year BSc Data Analytics student (Graduated July 2026 with 9.4 CGPA) with hands-on experience in data cleaning, visualization, hypothesis testing, and machine learning using Python, SQL, Power BI, and Excel.
             </p>
             <p class="services-summary-text">
-              Proven ability to translate complex datasets into clear insights and production-ready analytics solutions. Actively seeking Data Analyst, Business Analyst, BI Analyst, and ML/AI Internship opportunities.
+              My experience spans clinical analytics, market research, and end-to-end machine learning projects, including model deployment and NLP-based applications. Actively seeking Data Analyst, Business Analyst, BI Analyst, and ML/AI Internship opportunities.
             </p>
 
             <div class="services-stats-row">
@@ -212,15 +219,18 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- Work Experience Section (Vertical Timeline) -->
-    <section id="experience" class="section experience-section">
+    <section id="experience" class="section">
       <div class="container">
-        <h2 class="section-title text-center" style="text-align: center;">My Work Experience</h2>
-        <p class="section-subtitle text-center" style="text-align: center; margin-bottom: 56px;">Industry internships and data analyst roles</p>
+        <div class="section-header-center">
+          <h2 class="section-title">My Work Experience</h2>
+          <p class="section-subtitle">Professional internships and data analyst roles spanning clinical analytics, hardware intelligence, and market research</p>
+        </div>
 
         <div class="timeline-container">
           <div class="timeline-line"></div>
@@ -271,7 +281,7 @@
               <div class="dates">Jul 2024</div>
             </div>
             <div class="timeline-dot-wrapper">
-              <div class="timeline-dot yellow"></div>
+              <div class="timeline-dot gold"></div>
             </div>
             <div class="timeline-content">
               <h3>Data Analyst</h3>
@@ -294,28 +304,28 @@
               <div class="timeline-dot purple"></div>
             </div>
             <div class="timeline-content">
-              <h3>Data Analyst (Virtual Intern)</h3>
+              <h3>Data Analyst (Virtual Internship)</h3>
               <ul class="timeline-bullets">
                 <li>Performed hypothesis testing, data cleaning, and visualization on complex datasets using Python and pandas.</li>
                 <li>Built and evaluated machine learning models as part of a virtual internship program.</li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Projects / My Latest Works Section -->
+    <!-- Projects Section ("My Latest Works") -->
     <section id="projects" class="section section-bg-alt">
       <div class="container">
-        <div class="projects-header-flex">
-          <div>
-            <h2 class="section-title">My Latest Works</h2>
-            <p class="section-subtitle" style="margin-bottom: 0;">Machine learning, analytics notebooks, NLP applications, and BI dashboards</p>
-          </div>
+        <div class="section-header-center">
+          <h2 class="section-title">My Latest Works</h2>
+          <p class="section-subtitle">Deep learning foundation notebooks, predictive ML models, conversational AI, and interactive dashboards</p>
         </div>
 
         <div class="projects-grid">
+          
           <!-- Project 1: PyTorch Foundation -->
           <article class="project-card">
             <div class="project-card-header bg-teal">
@@ -344,17 +354,17 @@
 
           <!-- Project 2: Data EDA & Visualisation -->
           <article class="project-card">
-            <div class="project-card-header bg-yellow">
+            <div class="project-card-header bg-gold">
               <div class="project-icon-badge">
                 <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
               </div>
-              <span class="project-status-tag">Data Analytics</span>
+              <span class="project-status-tag">EDA & Viz</span>
             </div>
             <div class="project-card-body">
               <h3 class="project-card-title">Data EDA & Visualisation Project</h3>
               <div class="project-card-date">Analytics Notebook</div>
               <p class="project-card-desc">
-                Implemented EDA, data cleaning, and visualization over Netflix and YouTube datasets with core topics of Python data analytics and insights reporting in notebook form.
+                Implemented EDA, data cleaning, and visualization over Netflix and YouTube datasets with core topics of Python data analytics and insights reporting in Notebook form.
               </p>
               <div class="project-tech-tags">
                 <span class="project-tech-tag">EDA</span>
@@ -380,7 +390,7 @@
               <h3 class="project-card-title">Apartment Price Predictor</h3>
               <div class="project-card-date">2026</div>
               <p class="project-card-desc">
-                Random Forest Regressor trained on custom datasets for rent estimation. Deployed as a FastAPI backend on Hugging Face Spaces with a modern web UI.
+                High-performance Random Forest Regressor trained on custom datasets for rent estimation. Deployed as a FastAPI backend on Hugging Face Spaces.
               </p>
               <div class="project-tech-tags">
                 <span class="project-tech-tag">Scikit-Learn</span>
@@ -451,7 +461,7 @@
 
           <!-- Project 6: BCG GenAI Job Simulation -->
           <article class="project-card">
-            <div class="project-card-header bg-yellow">
+            <div class="project-card-header bg-gold">
               <div class="project-icon-badge">
                 <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4z"/></svg>
               </div>
@@ -467,7 +477,7 @@
                 <span class="project-tech-tag">Python</span>
                 <span class="project-tech-tag">Pandas</span>
                 <span class="project-tech-tag">GenAI</span>
-                <span class="project-tech-tag">Financial Data</span>
+                <span class="project-tech-tag">Financial Analytics</span>
               </div>
               <div class="project-card-actions">
                 <a class="btn btn-outline btn-sm" href="https://github.com/Ayushsan1/FAQ-chatbot" target="_blank" rel="noopener">Repository</a>
@@ -549,6 +559,7 @@
               </div>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -556,8 +567,10 @@
     <!-- Education & Certifications Section -->
     <section id="education" class="section">
       <div class="container">
-        <h2 class="section-title text-center" style="text-align: center;">Education & Certifications</h2>
-        <p class="section-subtitle text-center" style="text-align: center; margin-bottom: 48px;">Academic degree and professional credentials</p>
+        <div class="section-header-center">
+          <h2 class="section-title">Education & Credentials</h2>
+          <p class="section-subtitle">Academic degree with top grade metrics and certified specialized programs</p>
+        </div>
 
         <div class="edu-cert-grid">
           <!-- Education Card -->
@@ -597,23 +610,20 @@
       </div>
     </section>
 
-    <!-- Leadership / Involvement Section -->
+    <!-- Leadership Section -->
     <section class="section section-bg-alt">
       <div class="container">
-        <h2 class="section-title">Leadership & Campus Involvement</h2>
-        <div style="margin-top: 32px;">
-          <div class="leadership-card">
-            <div class="service-icon-circle coral">
-              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            </div>
-            <div>
-              <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">President — Entrepreneurship Cell (RC E-Cell)</h3>
-              <p style="font-size: 14px; font-weight: 600; color: var(--teal-primary); margin-bottom: 12px;">Rajokri Campus • Nov 2024 – 2025</p>
-              <ul class="timeline-bullets">
-                <li>Led a dynamic student team organizing flagship events, workshops, and guest speaker sessions to foster entrepreneurial thinking beyond the academic curriculum.</li>
-                <li>Coordinated cross-functional teams to execute successful campus initiatives and pitch competitions.</li>
-              </ul>
-            </div>
+        <div class="leadership-card">
+          <div class="service-icon-circle coral">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text-heading); margin-bottom: 4px;">President — Entrepreneurship Cell (RC E-Cell)</h3>
+            <p style="font-size: 14.5px; font-weight: 700; color: var(--teal-primary); margin-bottom: 12px;">Rajokri Campus • Nov 2024 – 2025</p>
+            <ul class="timeline-bullets">
+              <li>Led a dynamic student team organizing flagship events, workshops, and guest speaker sessions to foster entrepreneurial thinking beyond the academic curriculum.</li>
+              <li>Coordinated cross-functional teams to execute successful campus initiatives and pitch competitions.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -630,7 +640,7 @@
 
           <div class="hero-ctas" style="margin-top: 40px;">
             <a class="btn btn-primary" href="mailto:aayushmish18@gmail.com">Send an Email</a>
-            <a class="btn btn-outline" href="https://drive.google.com/file/d/124cHdws6RxuOJRF1J5J5DzIG5U_oQ_-K/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-outline" href="https://drive.google.com/file/d/1D_1Pw_KDS_zvsXhVv0poFWtScqWQl6kU/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
           </div>
         </div>
 
@@ -675,9 +685,9 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="brand" style="font-size: 20px;">
-        Ayush<span class="accent">.</span>
-      </div>
+      <a class="brand" href="#" style="font-size: 22px;">
+        Ayush<span class="accent-dot">.</span>
+      </a>
 
       <div class="footer-copy">
         © <span id="year"></span> Ayush Mishra. All rights reserved.
