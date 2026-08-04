@@ -1,56 +1,73 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-const links = document.querySelectorAll('.nav a');
-const yearEl = document.getElementById('year');
+/* ==========================================================================
+   Ayush Mishra Portfolio - Interactive JavaScript
+   ========================================================================== */
 
-function setYear() {
-  const y = new Date().getFullYear();
-  if (yearEl) yearEl.textContent = y;
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
+  const navLinks = document.querySelectorAll('.nav a');
+  const yearEl = document.getElementById('year');
 
-function closeNav() {
-  nav.classList.remove('open');
-}
-
-function toggleNav() {
-  nav.classList.toggle('open');
-}
-
-function smoothScroll(event) {
-  const href = event.currentTarget.getAttribute('href');
-  if (!href || !href.startsWith('#')) return;
-  event.preventDefault();
-  const target = document.querySelector(href);
-  if (!target) return;
-  const rect = target.getBoundingClientRect();
-  const offsetTop = window.pageYOffset + rect.top - 56;
-  window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-  closeNav();
-}
-
-function updateActiveLink() {
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  const scrollPos = window.scrollY + 120;
-  let currentId = '';
-  for (const s of sections) {
-    const top = s.offsetTop;
-    const bottom = top + s.offsetHeight;
-    if (scrollPos >= top && scrollPos < bottom) {
-      currentId = s.id;
-      break;
-    }
+  // Set Current Year in Footer
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
   }
-  links.forEach(a => {
-    const href = a.getAttribute('href') || '';
-    const id = href.replace('#', '');
-    if (id === currentId) a.classList.add('active');
-    else a.classList.remove('active');
-  });
-}
 
-setYear();
-if (toggle) toggle.addEventListener('click', toggleNav);
-links.forEach(a => a.addEventListener('click', smoothScroll));
-window.addEventListener('scroll', updateActiveLink);
-window.addEventListener('resize', updateActiveLink);
-document.addEventListener('DOMContentLoaded', updateActiveLink);
+  // Mobile Menu Toggle
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+  }
+
+  // Close Mobile Menu when link clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (siteNav.classList.contains('open')) {
+        siteNav.classList.remove('open');
+      }
+
+      // Smooth scroll offset adjustment for header height
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerHeight = document.querySelector('.site-header').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+  // Active Link Highlight on Scroll
+  function handleScrollHighlight() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 120;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollHighlight);
+  window.addEventListener('resize', handleScrollHighlight);
+  handleScrollHighlight();
+});
