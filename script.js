@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ayush Mishra Portfolio - Interactive JavaScript
+   Ayush Mishra Portfolio — Modern Interactive JavaScript
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav a');
   const yearEl = document.getElementById('year');
 
-  // Set Current Year in Footer
+  // Dynamic Copyright Year
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Mobile Menu Toggle
+  // Mobile Navigation Menu Toggle
   if (menuToggle && siteNav) {
     menuToggle.addEventListener('click', () => {
       siteNav.classList.toggle('open');
@@ -21,22 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close Mobile Menu when link clicked
+  // Smooth Scroll with Header Offset Adjustment
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       if (siteNav.classList.contains('open')) {
         siteNav.classList.remove('open');
       }
 
-      // Smooth scroll offset adjustment for header height
       const targetId = link.getAttribute('href');
       if (targetId && targetId.startsWith('#')) {
         e.preventDefault();
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          const headerHeight = document.querySelector('.site-header').offsetHeight;
+          const header = document.querySelector('.site-header');
+          const headerHeight = header ? header.offsetHeight : 80;
           const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-          
+
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Active Link Highlight on Scroll
-  function handleScrollHighlight() {
+  // Active Link Highlighting on Scroll
+  function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
-    const scrollPosition = window.scrollY + 120;
+    const scrollPosition = window.scrollY + 140;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('scroll', handleScrollHighlight);
-  window.addEventListener('resize', handleScrollHighlight);
-  handleScrollHighlight();
+  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+  window.addEventListener('resize', updateActiveNavLink, { passive: true });
+  updateActiveNavLink();
 });
